@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <title>dfa.io</title>
+        <title>Defining Variables Inside Expressions in Python</title>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="/theme/css/main.css" type="text/css" />
 
@@ -25,43 +25,30 @@
                     <a href="/category/posts.html">posts</a>&nbsp;
                 </nav>
         </header><!-- /#banner -->
-        
-        
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="defining-variables-inside-expressions-in-python.html" rel="bookmark"
+           title="Permalink to Defining Variables Inside Expressions in Python">Defining Variables Inside Expressions in Python</a></h1>
+    </header>
 
-            <aside id="featured" class="body">
-                <article>
-                    <h1 class="entry-title"><a href="/defining-variables-inside-expressions-in-python.html">Defining Variables Inside Expressions in Python</a></h1> 
+    <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2015-03-09T00:00:00+01:00">
                 Mon 09 March 2015
         </abbr>
-</footer><!-- /.post-info --><p>Of course I should start with the disclaimer that this is a complete hack. But it's a fun one.</p>
+</footer><!-- /.post-info -->      <p>Of course I should start with the disclaimer that this is a complete hack. But it's a fun one.</p>
 <p>There's been a bit of a competition among my friends and me recently as to who can write the best one-liners in python. While I'm no means in the lead (one of my friends wrote an entire tetris implementation in one line!), I did discover this fun little hack:</p>
 <div class="highlight"><pre><span class="nb">__import__</span><span class="p">(</span><span class="s">&quot;sys&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">getframe</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">f_locals</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s">&quot;foo&quot;</span><span class="p">:</span><span class="mi">42</span><span class="p">})</span>
 </pre></div>
 
 
-<p>We grab the local variables for the current function call and force in an extra variable. I think the "<strong>import</strong>" is a nice touch.</p>                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
-        
+<p>We grab the local variables for the current function call and force in an extra variable. I think the "<strong>import</strong>" is a nice touch.</p>
+    </div><!-- /.entry-content -->
 
- 
-            <li><article class="hentry">    
-                <header>
-                    <h3><a href="/functions-are-values.html" rel="bookmark"
-                           title="Permalink to Functions are Values">Functions are Values</a></h3>
-                </header>
-                
-                <div class="entry-content">
-                <p>And types are propositions.</p>
-                <a class="readmore" href="/functions-are-values.html">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
-            </ol><!-- /#posts-list -->
-            </section><!-- /#content -->
+  </article>
+</section>
         <section id="extras" class="body">
         </section><!-- /#extras -->
 
