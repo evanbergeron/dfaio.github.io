@@ -41,7 +41,13 @@
 </pre></div>
 
 
-<p>We grab the local variables for the current function call and force in an extra variable. I think the "<strong>import</strong>" is a nice touch.</p>                </article>
+<p>This is gross for a number of reasons. Firstly, the sys.getframe method returns a frame object from the call stack, but this is implementation defined and not guaranteed to work in all versions of python.</p>
+<p>Then, the f_locals field of the frame object is a dictionary of all the local variables in our current stack frame. But since we're arbitrarily constraining ourselves to expressions (one-liners are cooler this way), we can't write a line like:</p>
+<div class="highlight"><pre><span class="n">thisFrame</span><span class="o">.</span><span class="n">f_locals</span><span class="p">[</span><span class="s">&quot;foo&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">42</span>
+</pre></div>
+
+
+<p>So we hack it with a builtin destructive dictionary method, update. Since this is ultimately a destructive function call, while this is technically an expression, it evaluates to None.</p>                </article>
             </aside><!-- /#featured -->
                 <section id="content" class="body">
                     <hr />
