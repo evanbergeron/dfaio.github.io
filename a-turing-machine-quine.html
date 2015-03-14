@@ -78,7 +78,7 @@
 </pre></div>
 
 
-<p>Using this proof as a template, let's consider how we would write a quine in python. As before, let's consider part A first. Part A needs to give part B it's own source code. In the TM model, this was achieved by leaving a copy of B's description on the tape. The whole point here was to give part B a copy of its source code. The TM model uses the tape as its memory.</p>
+<p>Using this proof as a template, let's consider how we would write a quine in python. As before, let's consider part A first. Part A needs to give B a copy of B's source code. In the TM model, this was achieved by leaving a copy of B's description on the tape.</p>
 <p>In python, we can just assign into a variable to achieve the same effect. So our part A should look something like</p>
 <div class="highlight"><pre><span class="n">b</span> <span class="o">=</span> <span class="s">&quot;b&#39;s source code here&quot;</span>
 </pre></div>
